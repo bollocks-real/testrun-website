@@ -1,5 +1,5 @@
 // YouTube Data API Configuration
-const YOUTUBE_API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your API key
+const YOUTUBE_API_KEY = 'AIzaSyDhpxhZWE4QAJRpqYAbyKVodpLG8P9sfuQ'; // Replace with your API key
 const CHANNEL_ID = 'UCL8bh3lW4OLz4w_1xFcPIrQ'; // @testrun798 channel ID
 const MAX_VIDEOS = 12;
 
