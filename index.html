@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TestRun - YouTube Channel Hub</title>
+  <meta name="description" content="Watch the latest videos from TestRun YouTube channel directly on our website or visit YouTube.">
+  <meta name="keywords" content="TestRun, YouTube, videos, channel">
+  <meta property="og:title" content="TestRun - YouTube Channel Hub">
+  <meta property="og:description" content="Watch TestRun videos on our website">
+  <meta property="og:image" content="https://www.youtube.com/yt/brand/media/image/YouTube-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h1>🎬 TestRun</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#videos">Videos</a>
+        <a href="https://www.youtube.com/@testrun798" target="_blank" class="btn btn-primary">Subscribe on YouTube</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to TestRun</h1>
+      <p>Watch the latest videos from TestRun directly here or visit YouTube for more content</p>
+      <div>
+        <a href="#videos" class="btn btn-primary btn-large">Watch Videos</a>
+        <a href="https://www.youtube.com/@testrun798" target="_blank" class="btn btn-secondary btn-large">Visit YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Setup Instructions (Hidden by default, shown if API key not set) -->
+    <div class="setup-section" id="setupSection" style="display: none;">
+      <div class="setup-content">
+        <h2>⚙️ Setup Required</h2>
+        <p>To see videos, you need to add your YouTube API key:</p>
+        <ol>
+          <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a></li>
+          <li>Enable YouTube Data API v3</li>
+          <li>Create an API Key in Credentials</li>
+          <li>Open <code>script.js</code> and replace <code>'YOUR_API_KEY_HERE'</code> with your key</li>
+          <li>Refresh this page</li>
+        </ol>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">See <a href="https://github.com/bollocks-real/testrun-website#step-1-get-your-api-key" target="_blank">detailed instructions</a></p>
+      </div>
+    </div>
+
+    <!-- Videos Section -->
+    <section class="videos-section" id="videos">
+      <div class="section-header">
+        <h2>Latest Videos</h2>
+        <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+      </div>
+      <div class="video-grid" id="videoGrid">
+        <div class="loading">Loading videos</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Video Player Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Now Playing</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe 
+          width="100%" 
+          height="600" 
+          src="" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 TestRun Video Hub. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/@testrun798" target="_blank">YouTube Channel</a>
+        <a href="https://github.com/bollocks-real/testrun-website" target="_blank">GitHub</a>
+        <a href="https://github.com/bollocks-real/testrun-website#troubleshooting" target="_blank">Help</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
